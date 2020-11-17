@@ -14,6 +14,10 @@ public class OperatorFactory {
         operatorHandlers.put(notLike, new NotLikeHandler());
         operatorHandlers.put(greaterThanOrEqualTo, new GreaterThanOrEqualToHandler());
         operatorHandlers.put(equals, new EqualsHandler());
+        operatorHandlers.put(notEquals, new NotEqualsHandler());
+        operatorHandlers.put(lessThan, new LessThanHandler());
+        operatorHandlers.put(greaterThan, new GreaterThanHandler());
+        operatorHandlers.put(lessThanOrEqualTo, new LessThanOrEqualToHandler());
     }
 
     public static OperatorHandler getOperatorHandler(Operator operator) {

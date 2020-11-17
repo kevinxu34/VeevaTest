@@ -4,5 +4,9 @@ public enum Operator {
     notLike,
     like,
     greaterThanOrEqualTo,
-    equals
+    equals,
+    notEquals,
+    lessThan,
+    greaterThan,
+    lessThanOrEqualTo
 }

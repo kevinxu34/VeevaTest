@@ -1,0 +1,6 @@
+### From Gradle
+To run this program using Gradle, run the following commands at the project root:
+
+```
+./gradlew clean build
+```

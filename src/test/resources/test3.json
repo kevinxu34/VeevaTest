@@ -1,0 +1,46 @@
+{
+  "conditions":[
+    {
+      "conditions": [
+        {
+          "field":"A",
+          "operator":"equals",
+          "values":[
+            "'a'"
+          ]
+        },
+        {
+          "field":"B",
+          "operator":"notEquals",
+          "values":[
+            "'b'"
+          ]
+        }
+      ],
+      "conjunction": "and"
+    },
+    {
+      "conditions": [
+        {
+          "field":"C",
+          "operator":"equals",
+          "values":[
+            "'c'"
+          ]
+        },
+        {
+          "field":"D",
+          "operator":"notEquals",
+          "values":[
+            "'d'"
+          ]
+        }
+      ],
+      "conjunction": "and"
+    }
+
+
+
+  ],
+  "conjunction":"or"
+}

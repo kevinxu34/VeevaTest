@@ -10,14 +10,15 @@ import java.util.StringJoiner;
 public abstract class ConjunctionHandler {
     protected abstract StringJoiner getStringJoiner();
 
-    public String join(List<Condition> conditions) {
+    public String join(List<String> conditions, int level) {
         StringJoiner sj = getStringJoiner();
-        for(Condition c : conditions) {
-            OperatorHandler operatorHandler = OperatorFactory.getOperatorHandler(c.getOperator());
-            if(operatorHandler != null) {
-                sj.add(operatorHandler.join(c.getField(), c.getValues().get(0)));
-            }
+        conditions.stream().forEach(e -> sj.add(e));
+
+        if(level > 0) {
+            return "(" + sj.toString() + ")";
+        } else {
+            return sj.toString();
         }
-        return sj.toString();
+
     }
 }

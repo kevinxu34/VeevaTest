@@ -1,0 +1,19 @@
+{
+  "conditions":[
+    {
+      "field":"Country_vod__c",
+      "operator":"notLike",
+      "values":[
+        "'%a%'"
+      ]
+    },
+    {
+      "field":"Account_vod__r.Name",
+      "operator":"like",
+      "values":[
+        "'%b%'"
+      ]
+    }
+  ],
+  "conjunction":"noExist"
+}
