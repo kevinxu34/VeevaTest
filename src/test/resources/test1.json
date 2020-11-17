@@ -1,0 +1,33 @@
+{
+  "conditions":[
+    {
+      "field":"Country_vod__c",
+      "operator":"notLike",
+      "values":[
+        "'%a%'"
+      ]
+    },
+    {
+      "field":"Account_vod__r.Name",
+      "operator":"like",
+      "values":[
+        "'%b%'"
+      ]
+    },
+    {
+      "field":"QA_Field_04__c",
+      "operator":"greaterThanOrEqualTo",
+      "values":[
+        "2020-09-18T16:00:00.000Z"
+      ]
+    },
+    {
+      "field":"QA_Field_02__c",
+      "operator":"equals",
+      "values":[
+        "CNY1"
+      ]
+    }
+  ],
+  "conjunction":"and"
+}
