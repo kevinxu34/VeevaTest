@@ -1,5 +1,6 @@
 package com.veeva.test.conditionJoiner;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -62,6 +63,16 @@ public class JoinerTest {
     public void testIncorrectJsonFormat_not_conjunction_or_field() throws IOException {
         String jsonString = readFile("src/test/resources/test6.json");
         Assert.assertEquals(joiner.join(jsonString),"");
+    }
+
+    @Test
+    public void testEmpty() throws JsonProcessingException {
+        Assert.assertEquals(joiner.join(""), "");
+    }
+
+    @Test
+    public void testNull() throws JsonProcessingException {
+        Assert.assertEquals(joiner.join(null), "");
     }
 
 }

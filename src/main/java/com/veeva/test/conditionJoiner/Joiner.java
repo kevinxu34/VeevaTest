@@ -30,6 +30,9 @@ public class Joiner {
      * @throws JsonProcessingException
      */
     public String join(String jsonString) throws JsonProcessingException {
+        if(jsonString == null || jsonString.isEmpty()) {
+            return "";
+        }
         JsonNode root = objectMapper.readTree(jsonString);
         return join(root, 0);
     }
