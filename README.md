@@ -1,8 +1,8 @@
 ## Introduction
-This utility can parse the JSON string and flatten it to the conjunctional condition string
+This utility can parse the JSON string and flatten it to the conjunctional condition string.
 
 ### How to use
-Plesae refer to the /src/test/java/com/veeva/test/conditionJoiner/JoinerTest.java
+Please refer to the /src/test/java/com/veeva/test/conditionJoiner/JoinerTest.java
 
 ```
 Joiner joiner = new Joiner();
