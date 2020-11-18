@@ -1,5 +1,6 @@
 package com.veeva.test.conditionJoiner;
 
+import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import org.testng.Assert;
@@ -73,6 +74,11 @@ public class JoinerTest {
     @Test
     public void testNull() throws JsonProcessingException {
         Assert.assertEquals(joiner.join(null), "");
+    }
+
+    @Test(expectedExceptions = JsonParseException.class)
+    public void testNotJson() throws JsonProcessingException {
+        Assert.assertEquals(joiner.join("abcd"), "");
     }
 
 }
